@@ -45,6 +45,14 @@ return [
             'driver' => 'token',
             'provider' => 'users',
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'mag',
+        ],
+        'home' =>[
+            'driver' => 'session',
+            'provider' => 'qian',
+        ],
     ],
 
     /*
@@ -74,6 +82,14 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+        'mag' => [
+            'driver' => 'eloquent',
+            'model' => App\Http\Models\Manager::class,
+        ],
+        'qian' => [
+            'driver' => 'eloquent',
+            'model' => App\Http\Models\Student::class
+        ]
     ],
 
     /*
@@ -94,7 +110,8 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'table' => 'password_resets',
+//            'table' => 'password_resets',
+            'table'  => 'manager',
             'expire' => 60,
         ],
     ],
