@@ -10,11 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', 'Home\IndexController@index');
-Route::get('home/articleList/{list_name}','Home\ArticleController@getList');
-Route::get('home/articleInfo/{ar_id}','Home\ArticleController@getInfo');
-
 
 /*********设置url前缀 和 命名空间前缀 的路由群组**********/
 Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){

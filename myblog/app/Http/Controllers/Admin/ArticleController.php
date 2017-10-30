@@ -185,7 +185,7 @@ class ArticleController extends Controller
             $file = $request->file('Filedata');  //文件流
             if($file->isValid()){
                 $filename = $file -> store('article');
-                echo json_encode(['success'=>true,'filename'=>"47.95.206.25/home/article/downfile/".$filename]);
+                echo json_encode(['success'=>true,'filename'=>"http://www.shujuyang.cn/home/article/downfile/".$filename]);
             }else{
                 echo json_encode(['success'=>false]);
             }

@@ -1,22 +1,22 @@
+// 引入vue
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router.js'
+import '../home/js/jquery.min'
+// <script src="home/js/nav.js"></script>
+//import 'ueditor/zh-cn.js'
 
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+// 引用样式
+// css
+// js
 
-require('./bootstrap');
-
-window.Vue = require('vue');
-
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-Vue.component('example-component', require('./components/ExampleComponent.vue'));
-
-const app = new Vue({
-    el: '#app'
-});
+var vm = new Vue({
+    el: '#app',
+    // 实例的模板的几种方式之一
+    router,
+    render: function(createElement) {
+        // return createElement (组件对象)
+        // App组件中的模板最终会替换 index.blade.php 中的 #app 这个原色
+        return createElement(App)
+    }
+})
