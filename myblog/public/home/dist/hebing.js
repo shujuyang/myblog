@@ -11870,7 +11870,7 @@ var staticRenderFns = [
             _vm._v(" "),
             _c("ul", [
               _c("h3", [
-                _c("a", { attrs: { href: "/home/articleInfo/1" } }, [
+                _c("a", { attrs: { href: "#/articleInfo/1" } }, [
                   _vm._v("住在手机里的朋友")
                 ])
               ]),

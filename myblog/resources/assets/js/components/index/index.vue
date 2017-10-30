@@ -18,7 +18,7 @@
                 <div class="blogs">
                     <figure><img src="home/images/01.jpg"></figure>
                     <ul>
-                        <h3><a href="/home/articleInfo/1">住在手机里的朋友</a></h3>
+                        <h3><a href="#/articleInfo/1">住在手机里的朋友</a></h3>
                         <p>通信时代，无论是初次相见还是老友重逢，交换联系方式，常常是彼此交换名片，然后郑重或是出于礼貌用手机记下对方的电话号码。在快节奏的生活里，我们不知不觉中就成为住在别人手机里的朋友。又因某些意外，变成了别人手机里匆忙的过客，这种快餐式的友谊 ...</p>
                         <p class="autor"><span class="lm f_l"><a href="/">个人博客</a></span><span class="dtime f_l">2014-02-19</span><span class="viewnum f_r">浏览（<a href="/">459</a>）</span><span class="pingl f_r">评论（<a href="/">30</a>）</span></p>
                     </ul>
