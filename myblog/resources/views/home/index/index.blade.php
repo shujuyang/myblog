@@ -12,6 +12,4 @@
 </body>
 {{--D:\mysoftware\phpstudy\WWW\myblog\myblog\--}}
 <script src='{{url("/home/dist/hebing.js")}}'></script>
-<script type="text/javascript" src="/home/js/jquery.min.js"></script>
-<script type="text/javascript" src="/home/js/sliders.js"></script>
 </html>

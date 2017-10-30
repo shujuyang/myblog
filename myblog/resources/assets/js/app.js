@@ -2,7 +2,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router.js'
-import '../home/js/jquery.min'
+
 // <script src="home/js/nav.js"></script>
 //import 'ueditor/zh-cn.js'
 
