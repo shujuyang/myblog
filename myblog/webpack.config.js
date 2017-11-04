@@ -30,6 +30,7 @@ module.exports = {
                 test: /\.js$/,
                 loader: 'babel-loader', // 需要下载 babel-loader这个包和babel-preset-es2015这个包
                 exclude: /node_modules/ // 忽略node_modules文件夹，不要去将node_modules中的js转换为es5
+
             }
         ]
     }

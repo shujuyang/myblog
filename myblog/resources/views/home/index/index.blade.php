@@ -11,5 +11,5 @@
     <div id="app"></div>
 </body>
 {{--D:\mysoftware\phpstudy\WWW\myblog\myblog\--}}
-<script src='{{url("/home/dist/hebing.js")}}'></script>
+<script src='/home/dist/hebing.js'></script>
 </html>

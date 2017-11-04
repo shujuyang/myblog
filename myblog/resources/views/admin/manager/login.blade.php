@@ -37,7 +37,7 @@
       </div>
     @endif
 
-    <form class="form form-horizontal" id="form" action="/admin/manager/login" method="post">
+    <form class="form form-horizontal" id="form" action="/index.php/admin/manager/login" method="post">
       {{csrf_field()}}
       <div class="row cl">
         <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
@@ -72,7 +72,7 @@
     </form>
   </div>
 </div>
-<div class="footer">北京狮诺后台管理系统</div>
+<div class="footer">后台管理系统</div>
 <script type="text/javascript" src="/admin/lib/jquery/1.9.1/jquery.min.js"></script> 
 <script type="text/javascript" src="/admin/static/h-ui/js/H-ui.min.js"></script>
 <script type="text/javascript">
@@ -106,7 +106,8 @@
                     'X-CSRF-TOKEN' : "{{ csrf_token() }}"
                 },
                 data : {'captchaValue' : value},
-                url  : '/admin/manager/captcha',
+                dataType : 'jsonp',
+                url  : '/index.php/admin/manager/captcha',
                 success : function(data){
                     if(data == 1){
                         $("#loginBtn").removeAttr("disabled");
@@ -122,6 +123,15 @@
                 }
             });
         }
+    });
+    $(function() {
+       $.ajax({
+           url: 'admin/index/index',
+           type: 'get',
+           success : function (e) {
+               console.log(e)
+           }
+       })
     });
 </script>
 @endsection

@@ -11,12 +11,16 @@
 |
 */
 Route::get('/', 'Home\IndexController@index');
+Route::get('/home', 'Home\IndexController@index');
+Route::get('/home/index', 'Home\IndexController@index');
+Route::get('/home/index/index', 'Home\IndexController@index');
+Route::post('/captcha','Admin\ManagerController@captcha');
+
 
 /*********设置url前缀 和 命名空间前缀 的路由群组**********/
 Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
     Route::match(['get','post'],"manager/login","ManagerController@login")->name('login');
     Route::post('manager/captcha','ManagerController@captcha');
-
 
     /***************验证管理员是否登录的路由群组***************/
     Route::group(['middleware'=>['auth:admin']],function(){
