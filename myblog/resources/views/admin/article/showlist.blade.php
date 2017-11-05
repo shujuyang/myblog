@@ -167,16 +167,10 @@
                     tag = tag.substring(0,tag.length-1);
                     $(row).find('td:eq(6)').html(tag);
 
-                    var column="";
-                    var j;
-                    for(j in data.column){
-                        column += data.column[j].col_name
-                        column += ","
-                    }
-                    column = column.substring(0,column.length-1);
+                    var column=data.column.col_name;
                     $(row).find('td:eq(7)').html(column);
 
-                    var title = '<a href="/home/article/infoView/'+data.ar_id+'" target="_black">'+data.ar_title+'</a>';
+                    var title = '<a href="http://www.shujuyang.cn/#/articleInfo/'+data.ar_id+'" target="_black">'+data.ar_title+'</a>';
                     $(row).find('td:eq(2)').html(title);
                 },
             });

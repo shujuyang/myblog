@@ -31,7 +31,7 @@ class ArticleController extends Controller
     public function articleList (Request $request) {
         $columnId = Column::select('col_id')->where('col_name',$request->column)->first();
 
-        $articles = Article::select('ar_id','ar_column_id','ar_desc','created_at')
+        $articles = Article::select('ar_id','ar_title','ar_column_id','ar_desc','img_path','created_at')
                             ->with('column')
                             ->where('ar_column_id',$columnId->col_id)
                             ->orderBy('created_at','desc')
