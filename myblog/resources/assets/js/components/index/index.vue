@@ -14,7 +14,7 @@
             </div>
             <!-- banner代码 结束 -->
             <div class="topnews">
-                <h2><span><a href="/" target="_blank">栏目标题</a><a href="/" target="_blank">栏目标题</a><a href="/" target="_blank">栏目标题</a></span><b>文章</b>推荐</h2>
+                <h2><b>文章</b>推荐</h2>
                 <div v-for="article in articles" class="blogs">
                     <figure><img :src="article.img_path"></figure>
                     <ul>
@@ -60,7 +60,6 @@
             })
         },
         mounted: function () {
-
         }
 
     }

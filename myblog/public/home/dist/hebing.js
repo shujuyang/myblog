@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -70,7 +70,7 @@
 "use strict";
 
 
-var bind = __webpack_require__(8);
+var bind = __webpack_require__(9);
 var isBuffer = __webpack_require__(30);
 
 /*global toString:true*/
@@ -665,7 +665,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(19)
+var listToStyles = __webpack_require__(20)
 
 /*
 type StyleObject = {
@@ -999,10 +999,10 @@ function getDefaultAdapter() {
   var adapter;
   if (typeof XMLHttpRequest !== 'undefined') {
     // For browsers use XHR adapter
-    adapter = __webpack_require__(9);
+    adapter = __webpack_require__(10);
   } else if (typeof process !== 'undefined') {
     // For node use HTTP adapter
-    adapter = __webpack_require__(9);
+    adapter = __webpack_require__(10);
   }
   return adapter;
 }
@@ -8840,7 +8840,7 @@ Vue$3.nextTick(function () {
 
 /* harmony default export */ __webpack_exports__["a"] = (Vue$3);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(7), __webpack_require__(14).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1), __webpack_require__(7), __webpack_require__(15).setImmediate))
 
 /***/ }),
 /* 7 */
@@ -8873,6 +8873,12 @@ module.exports = g;
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__(29);
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
@@ -8888,7 +8894,7 @@ module.exports = function bind(fn, thisArg) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8899,7 +8905,7 @@ var settle = __webpack_require__(33);
 var buildURL = __webpack_require__(35);
 var parseHeaders = __webpack_require__(36);
 var isURLSameOrigin = __webpack_require__(37);
-var createError = __webpack_require__(10);
+var createError = __webpack_require__(11);
 var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(38);
 
 module.exports = function xhrAdapter(config) {
@@ -9076,7 +9082,7 @@ module.exports = function xhrAdapter(config) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9101,7 +9107,7 @@ module.exports = function createError(message, config, code, request, response) 
 
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9113,7 +9119,7 @@ module.exports = function isCancel(value) {
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9139,14 +9145,14 @@ module.exports = Cancel;
 
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__router_js__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__router_js__ = __webpack_require__(23);
 // 引入vue
 
 
@@ -9171,7 +9177,7 @@ var vm = new __WEBPACK_IMPORTED_MODULE_0_vue__["a" /* default */]({
 });
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -9224,13 +9230,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(15);
+__webpack_require__(16);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -9423,17 +9429,17 @@ exports.clearImmediate = clearImmediate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7), __webpack_require__(1)))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_App_vue__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_App_vue__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_App_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_App_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_254dcd2a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_App_vue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_254dcd2a_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_App_vue__ = __webpack_require__(22);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(17)
+  __webpack_require__(18)
 }
 var normalizeComponent = __webpack_require__(4)
 /* script */
@@ -9479,13 +9485,13 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(18);
+var content = __webpack_require__(19);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -9505,7 +9511,7 @@ if(false) {
 }
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -9519,7 +9525,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n", ""]);
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 /**
@@ -9552,7 +9558,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports) {
 
 //
@@ -9563,7 +9569,7 @@ module.exports = function listToStyles (parentId, list) {
 //
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9585,13 +9591,13 @@ if (false) {
 }
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(23);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index_vue__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_index_index_vue__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_home_vue__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_article_articleInfo_vue__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_article_articleList_vue__ = __webpack_require__(58);
@@ -9622,7 +9628,7 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
     { path: '/', redirect: { name: 'index' } }, { name: 'home', path: '/home', component: __WEBPACK_IMPORTED_MODULE_3__components_home_vue__["a" /* default */],
         children: [
         // 如果children 中的组件呈现到页面中，那么Admin 组件也一定呈现知道页面上
-        { name: 'index', path: '/index', component: __WEBPACK_IMPORTED_MODULE_2__components_index_index_vue__["a" /* default */] }, { name: 'articleInfo', path: '/articleInfo/:id', component: __WEBPACK_IMPORTED_MODULE_4__components_article_articleInfo_vue__["a" /* default */] }, { name: 'articleList', path: '/articleList/:id', component: __WEBPACK_IMPORTED_MODULE_5__components_article_articleList_vue__["a" /* default */] }]
+        { name: 'index', path: '/index', component: __WEBPACK_IMPORTED_MODULE_2__components_index_index_vue__["a" /* default */] }, { name: 'articleInfo', path: '/articleInfo/:id', component: __WEBPACK_IMPORTED_MODULE_4__components_article_articleInfo_vue__["a" /* default */] }, { name: 'articleList', path: '/articleList/:column', component: __WEBPACK_IMPORTED_MODULE_5__components_article_articleList_vue__["a" /* default */] }]
     }]
 });
 
@@ -9630,7 +9636,7 @@ var router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
 /* harmony default export */ __webpack_exports__["a"] = (router);
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12261,16 +12267,16 @@ if (inBrowser && window.Vue) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(1)))
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_index_vue__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_index_vue__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_58d89fc3_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_index_vue__ = __webpack_require__(47);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(25)
+  __webpack_require__(26)
 }
 var normalizeComponent = __webpack_require__(4)
 /* script */
@@ -12316,13 +12322,13 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(26);
+var content = __webpack_require__(27);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -12342,7 +12348,7 @@ if(false) {
 }
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(undefined);
@@ -12356,11 +12362,11 @@ exports.push([module.i, "\n", ""]);
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
@@ -12426,12 +12432,6 @@ exports.push([module.i, "\n", ""]);
 });
 
 /***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(29);
-
-/***/ }),
 /* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12439,7 +12439,7 @@ module.exports = __webpack_require__(29);
 
 
 var utils = __webpack_require__(0);
-var bind = __webpack_require__(8);
+var bind = __webpack_require__(9);
 var Axios = __webpack_require__(31);
 var defaults = __webpack_require__(5);
 
@@ -12474,9 +12474,9 @@ axios.create = function create(instanceConfig) {
 };
 
 // Expose Cancel & CancelToken
-axios.Cancel = __webpack_require__(12);
+axios.Cancel = __webpack_require__(13);
 axios.CancelToken = __webpack_require__(45);
-axios.isCancel = __webpack_require__(11);
+axios.isCancel = __webpack_require__(12);
 
 // Expose all/spread
 axios.all = function all(promises) {
@@ -12636,7 +12636,7 @@ module.exports = function normalizeHeaderName(headers, normalizedName) {
 "use strict";
 
 
-var createError = __webpack_require__(10);
+var createError = __webpack_require__(11);
 
 /**
  * Resolve or reject a Promise based on response status.
@@ -13055,7 +13055,7 @@ module.exports = InterceptorManager;
 
 var utils = __webpack_require__(0);
 var transformData = __webpack_require__(42);
-var isCancel = __webpack_require__(11);
+var isCancel = __webpack_require__(12);
 var defaults = __webpack_require__(5);
 
 /**
@@ -13208,7 +13208,7 @@ module.exports = function combineURLs(baseURL, relativeURL) {
 "use strict";
 
 
-var Cancel = __webpack_require__(12);
+var Cancel = __webpack_require__(13);
 
 /**
  * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -13403,15 +13403,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h2", [
-      _c("span", [
-        _c("a", { attrs: { href: "/", target: "_blank" } }, [_vm._v("栏目标题")]),
-        _c("a", { attrs: { href: "/", target: "_blank" } }, [_vm._v("栏目标题")]),
-        _c("a", { attrs: { href: "/", target: "_blank" } }, [_vm._v("栏目标题")])
-      ]),
-      _c("b", [_vm._v("文章")]),
-      _vm._v("推荐")
-    ])
+    return _c("h2", [_c("b", [_vm._v("文章")]), _vm._v("推荐")])
   },
   function() {
     var _vm = this
@@ -13719,22 +13711,22 @@ var staticRenderFns = [
             _vm._v("PHP")
           ]),
           _vm._v(" "),
-          _c("a", { attrs: { href: "#/articleList/linux", target: "_self" } }, [
-            _vm._v("linux")
+          _c("a", { attrs: { href: "#/articleList/Linux", target: "_self" } }, [
+            _vm._v("Linux")
           ]),
           _vm._v(" "),
-          _c("a", { attrs: { href: "#/articleList/mysql", target: "_self" } }, [
-            _vm._v("mysql")
+          _c("a", { attrs: { href: "#/articleList/MySQL", target: "_self" } }, [
+            _vm._v("MySQL")
           ]),
           _vm._v(" "),
-          _c("a", { attrs: { href: "#/articleList/js", target: "_self" } }, [
-            _vm._v("js")
+          _c("a", { attrs: { href: "#/articleList/JS", target: "_self" } }, [
+            _vm._v("JS")
           ]),
           _vm._v(" "),
           _c(
             "a",
             { attrs: { href: "#/articleList/message", target: "_self" } },
-            [_vm._v("留言")]
+            [_vm._v("message")]
           )
         ])
       ])
@@ -14127,7 +14119,7 @@ exports = module.exports = __webpack_require__(2)(undefined);
 exports.push([module.i, "@import url(/home/css/index.css);", ""]);
 
 // module
-exports.push([module.i, "\narticle {\n    width: 86%;\n}\n", ""]);
+exports.push([module.i, "\narticle {\n    width: 86%;\n}\n.ar_title {\n    text-align: center;\n    font-family: \"\\5FAE\\8F6F\\96C5\\9ED1\";\n    font-style: normal;\n    font-weight: 700;\n    font-size: 28px;\n    margin-bottom: 10px;\n}\n.ar_sTitle {\n    text-align: center;\n}\n.ar_sTitle .ar_column {\n    margin-right: 50px;\n}\n.ar_sTitle .time {\n    margin-left: 50px;\n}\n.ar_content {\n    margin-top: 25px;\n}\np {\n    margin-top: 10px;\n}\n\n", ""]);
 
 // exports
 
@@ -14137,8 +14129,18 @@ exports.push([module.i, "\narticle {\n    width: 86%;\n}\n", ""]);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -14158,14 +14160,13 @@ exports.push([module.i, "\narticle {\n    width: 86%;\n}\n", ""]);
     created() {
         // 发送异步请求，获取管理员列表信息
         __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/home/article/articleInfo/' + this.$route.params.id).then(res => {
+            //                console.log(res)
             if (res['data']['result']) {
                 this.article = res['data']['article'];
             }
         });
     },
-    mounted: function () {
-        console.log(this.article);
-    }
+    mounted: function () {}
 
 });
 
@@ -14178,16 +14179,38 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("div", { staticClass: "l_box f_l" }, [
+      _c("h1", {
+        staticClass: "ar_title",
+        domProps: { innerHTML: _vm._s(_vm.article.ar_title) }
+      }),
+      _vm._v(" "),
+      _c("div", { staticClass: "ar_sTitle" }, [
+        _c("span", {
+          staticClass: "ar_column",
+          domProps: { innerHTML: _vm._s(_vm.article.column.col_name) }
+        }),
+        _vm._v(" "),
+        _c("span", {
+          staticClass: "ar_editor",
+          domProps: { innerHTML: _vm._s(_vm.article.ar_editor) }
+        }),
+        _vm._v(" "),
+        _c("span", {
+          staticClass: "time",
+          domProps: { innerHTML: _vm._s(_vm.article.created_at) }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", {
+        staticClass: "ar_content",
+        domProps: { innerHTML: _vm._s(_vm.article.ar_content) }
+      })
+    ])
+  ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("div", { staticClass: "l_box f_l" })])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -14298,6 +14321,8 @@ exports.push([module.i, "\n", ""]);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(8);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
 //
@@ -14324,55 +14349,31 @@ exports.push([module.i, "\n", ""]);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 /* harmony default export */ __webpack_exports__["a"] = ({
     data: function () {
-        return {};
+        return {
+            articles: []
+        };
     },
-    mounted: function () {}
-
+    created() {
+        sendAxois(this);
+    },
+    watch: {
+        '$route'() {
+            // 发送异步请求，获取管理员列表信息
+            sendAxois(this);
+        }
+    }
 });
+function sendAxois(that) {
+    __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/home/article/articleList/' + that.$route.params.column).then(res => {
+        if (res['data']['result']) {
+            that.articles = res['data']['articles'];
+        }
+    });
+}
 
 /***/ }),
 /* 62 */
@@ -14383,302 +14384,70 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", [
+    _c("div", { staticClass: "l_box f_l" }, [
+      _c(
+        "div",
+        { staticClass: "topnews" },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._l(_vm.articles, function(article) {
+            return _c("div", { staticClass: "blogs" }, [
+              _c("figure", [_c("img", { attrs: { src: article.img_path } })]),
+              _vm._v(" "),
+              _c("ul", [
+                _c("a", { attrs: { href: "#/articleInfo/" + article.ar_id } }, [
+                  _c("h3", [_vm._v(_vm._s(article.ar_title))]),
+                  _vm._v(" "),
+                  _c("p", [_vm._v(_vm._s(article.ar_desc))])
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "autor" }, [
+                  _c("span", { staticClass: "lm f_l" }, [
+                    _c("a", { attrs: { href: "/" } }, [
+                      _vm._v(_vm._s(article.column.col_name))
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "dtime f_l" }, [
+                    _vm._v(_vm._s(article.created_at))
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(1, true),
+                  _vm._v(" "),
+                  _vm._m(2, true)
+                ])
+              ])
+            ])
+          })
+        ],
+        2
+      )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "l_box f_l" }, [
-        _c("div", { staticClass: "topnews" }, [
-          _c("h2", [
-            _c("span", [
-              _c(
-                "a",
-                { attrs: { href: "/home/articleInfo/1", target: "_blank" } },
-                [_vm._v("栏目标题")]
-              ),
-              _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                _vm._v("栏目标题")
-              ]),
-              _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                _vm._v("栏目标题")
-              ])
-            ]),
-            _c("b", [_vm._v("文章")]),
-            _vm._v("推荐")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "blogs" }, [
-            _c("figure", [
-              _c("img", { attrs: { src: "/home/images/01.jpg" } })
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("h3", [
-                _c("a", { attrs: { href: "/" } }, [_vm._v("住在手机里的朋友")])
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "通信时代，无论是初次相见还是老友重逢，交换联系方式，常常是彼此交换名片，然后郑重或是出于礼貌用手机记下对方的电话号码。在快节奏的生活里，我们不知不觉中就成为住在别人手机里的朋友。又因某些意外，变成了别人手机里匆忙的过客，这种快餐式的友谊 ..."
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "autor" }, [
-                _c("span", { staticClass: "lm f_l" }, [
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("个人博客")])
-                ]),
-                _c("span", { staticClass: "dtime f_l" }, [
-                  _vm._v("2014-02-19")
-                ]),
-                _c("span", { staticClass: "viewnum f_r" }, [
-                  _vm._v("浏览（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("459")]),
-                  _vm._v("）")
-                ]),
-                _c("span", { staticClass: "pingl f_r" }, [
-                  _vm._v("评论（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("30")]),
-                  _vm._v("）")
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "blogs" }, [
-            _c("figure", [
-              _c("img", { attrs: { src: "/home/images/02.jpg" } })
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("h3", [
-                _c("a", { attrs: { href: "/" } }, [_vm._v("教你怎样用欠费手机拨打电话")])
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "初次相识的喜悦，让你觉得似乎找到了知音。于是，对于投缘的人，开始了较频繁的交往。渐渐地，初识的喜悦退尽，接下来就是仅仅保持着联系，平淡到偶尔在节假曰发短信互致问候..."
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "autor" }, [
-                _c("span", { staticClass: "lm f_l" }, [
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("个人博客")])
-                ]),
-                _c("span", { staticClass: "dtime f_l" }, [
-                  _vm._v("2014-02-19")
-                ]),
-                _c("span", { staticClass: "viewnum f_r" }, [
-                  _vm._v("浏览（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("459")]),
-                  _vm._v("）")
-                ]),
-                _c("span", { staticClass: "pingl f_r" }, [
-                  _vm._v("评论（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("30")]),
-                  _vm._v("）")
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "blogs" }, [
-            _c("figure", [
-              _c("img", { attrs: { src: "/home/images/03.jpg" } })
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("h3", [
-                _c("a", { attrs: { href: "/" } }, [
-                  _vm._v("原来以为，一个人的勇敢是，删掉他的手机号码...")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "原来以为，一个人的勇敢是，删掉他的手机号码、QQ号码等等一切，努力和他保持距离。等着有一天，习惯不想念他，习惯他不在身边,习惯时间把他在我记忆里的身影磨蚀干净... "
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "autor" }, [
-                _c("span", { staticClass: "lm f_l" }, [
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("个人博客")])
-                ]),
-                _c("span", { staticClass: "dtime f_l" }, [
-                  _vm._v("2014-02-19")
-                ]),
-                _c("span", { staticClass: "viewnum f_r" }, [
-                  _vm._v("浏览（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("459")]),
-                  _vm._v("）")
-                ]),
-                _c("span", { staticClass: "pingl f_r" }, [
-                  _vm._v("评论（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("30")]),
-                  _vm._v("）")
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "blogs" }, [
-            _c("figure", [
-              _c("img", { attrs: { src: "/home/images/04.jpg" } })
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("h3", [
-                _c("a", { attrs: { href: "/" } }, [
-                  _vm._v("手机的16个惊人小秘密，据说99.999%的人都不知")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "引导语：知道么，手机有备用电池，手机拨号码12593+电话号码=陷阱……手机具有很多你不知道的小秘密，说出来一定很惊奇！不信的话就来看看吧！..."
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "autor" }, [
-                _c("span", { staticClass: "lm f_l" }, [
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("个人博客")])
-                ]),
-                _c("span", { staticClass: "dtime f_l" }, [
-                  _vm._v("2014-02-19")
-                ]),
-                _c("span", { staticClass: "viewnum f_r" }, [
-                  _vm._v("浏览（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("459")]),
-                  _vm._v("）")
-                ]),
-                _c("span", { staticClass: "pingl f_r" }, [
-                  _vm._v("评论（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("30")]),
-                  _vm._v("）")
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "blogs" }, [
-            _c("figure", [
-              _c("img", { attrs: { src: "/home/images/05.jpg" } })
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("h3", [
-                _c("a", { attrs: { href: "/" } }, [_vm._v("你面对的是生活而不是手机")])
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "每一次与别人吃饭，总会有人会拿出手机。以为他们在打电话或者有紧急的短信，但用余光瞟了一眼之后发现无非就两件事：1、看小说，2、上人人或者QQ..."
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "autor" }, [
-                _c("span", { staticClass: "lm f_l" }, [
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("个人博客")])
-                ]),
-                _c("span", { staticClass: "dtime f_l" }, [
-                  _vm._v("2014-02-19")
-                ]),
-                _c("span", { staticClass: "viewnum f_r" }, [
-                  _vm._v("浏览（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("459")]),
-                  _vm._v("）")
-                ]),
-                _c("span", { staticClass: "pingl f_r" }, [
-                  _vm._v("评论（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("30")]),
-                  _vm._v("）")
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "blogs" }, [
-            _c("figure", [
-              _c("img", { attrs: { src: "/home/images/06.jpg" } })
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("h3", [
-                _c("a", { attrs: { href: "/" } }, [
-                  _vm._v("豪雅手机正式发布! 在法国全手工打造的奢侈品")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "现在跨界联姻，时尚、汽车以及运动品牌联合手机制造商联合发布手机产品在行业里已经不再新鲜，上周我们给大家报道过著名手表制造商瑞士泰格·豪雅（Tag Heuer） 联合法国的手机制造商Modelabs发布的一款奢华手机的部分谍照，而近日该手机终于被正式发布了..."
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "autor" }, [
-                _c("span", { staticClass: "lm f_l" }, [
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("个人博客")])
-                ]),
-                _c("span", { staticClass: "dtime f_l" }, [
-                  _vm._v("2014-02-19")
-                ]),
-                _c("span", { staticClass: "viewnum f_r" }, [
-                  _vm._v("浏览（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("459")]),
-                  _vm._v("）")
-                ]),
-                _c("span", { staticClass: "pingl f_r" }, [
-                  _vm._v("评论（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("30")]),
-                  _vm._v("）")
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "blogs" }, [
-            _c("figure", [
-              _c("img", { attrs: { src: "/home/images/04.jpg" } })
-            ]),
-            _vm._v(" "),
-            _c("ul", [
-              _c("h3", [
-                _c("a", { attrs: { href: "/" } }, [
-                  _vm._v("手机的16个惊人小秘密，据说99.999%的人都不知")
-                ])
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _vm._v(
-                  "引导语：知道么，手机有备用电池，手机拨号码12593+电话号码=陷阱……手机具有很多你不知道的小秘密，说出来一定很惊奇！不信的话就来看看吧！..."
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "autor" }, [
-                _c("span", { staticClass: "lm f_l" }, [
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("个人博客")])
-                ]),
-                _c("span", { staticClass: "dtime f_l" }, [
-                  _vm._v("2014-02-19")
-                ]),
-                _c("span", { staticClass: "viewnum f_r" }, [
-                  _vm._v("浏览（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("459")]),
-                  _vm._v("）")
-                ]),
-                _c("span", { staticClass: "pingl f_r" }, [
-                  _vm._v("评论（"),
-                  _c("a", { attrs: { href: "/" } }, [_vm._v("30")]),
-                  _vm._v("）")
-                ])
-              ])
-            ])
-          ])
-        ])
-      ])
+    return _c("h2", [_c("b", [_vm._v("文章")]), _vm._v("推荐 "), _c("span")])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "" } }, [
+      _c("span", { staticClass: "viewnum f_r" }, [_vm._v("浏览（459）")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("a", { attrs: { href: "" } }, [
+      _c("span", { staticClass: "pingl f_r" }, [_vm._v("评论")])
     ])
   }
 ]

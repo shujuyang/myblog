@@ -28,7 +28,7 @@ var router = new VueRouter({
                 // 如果children 中的组件呈现到页面中，那么Admin 组件也一定呈现知道页面上
                 {name:'index',path:'/index',component:Index},
                 {name:'articleInfo',path:'/articleInfo/:id',component:ArticleInfo},
-                {name:'articleList',path:'/articleList/:id',component:ArticleList}
+                {name:'articleList',path:'/articleList/:column',component:ArticleList}
             ]
         },
     ]

@@ -10,10 +10,10 @@
                 <ul>
                     <a href="/" target="_self">首页</a>
                     <a href="#/articleList/PHP" target="_self">PHP</a>
-                    <a href="#/articleList/linux" target="_self">linux</a>
-                    <a href="#/articleList/mysql" target="_self">mysql</a>
-                    <a href="#/articleList/js" target="_self">js</a>
-                    <a href="#/articleList/message" target="_self">留言</a>
+                    <a href="#/articleList/Linux" target="_self">Linux</a>
+                    <a href="#/articleList/MySQL" target="_self">MySQL</a>
+                    <a href="#/articleList/JS" target="_self">JS</a>
+                    <a href="#/articleList/message" target="_self">message</a>
                 </ul>
             </nav>
         </header>
