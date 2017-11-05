@@ -26,7 +26,7 @@
         },
         created () {
             // 发送异步请求，获取管理员列表信息
-            axios.get('/home/article/articleInfo/'+this.$route.params.id).then(res => {
+            axios.get('/index.php/home/article/articleInfo/'+this.$route.params.id).then(res => {
 //                console.log(res)
                 if(res['data']['result']){
                     this.article = res['data']['article']

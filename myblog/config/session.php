@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'driver' => env('SESSION_DRIVER', 'file'),
+    'driver' => env('SESSION_DRIVER', 'redis'),
 
     /*
     |--------------------------------------------------------------------------
@@ -70,8 +70,8 @@ return [
     |
     */
 
-    'connection' => null,
-
+//    'connection' => null,
+    'connection' => 'session',
     /*
     |--------------------------------------------------------------------------
     | Session Database Table

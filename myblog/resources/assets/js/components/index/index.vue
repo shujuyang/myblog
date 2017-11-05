@@ -49,7 +49,7 @@
         },
         created () {
             // 发送异步请求，获取管理员列表信息
-            axios.get('/home/index/articleList',{
+            axios.get('/index.php/home/index/articleList',{
                 params: {
 
                 }

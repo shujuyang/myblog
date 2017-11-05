@@ -43,7 +43,7 @@
         },
     }
     function sendAxois(that) {
-        axios.get('/home/article/articleList/'+that.$route.params.column).then(res => {
+        axios.get('/index.php/home/article/articleList/'+that.$route.params.column).then(res => {
             if(res['data']['result']){
                 that.articles = res['data']['articles']
             }
