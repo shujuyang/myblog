@@ -37,14 +37,14 @@ class TagController extends Controller
                 // 通过验证
                 // 将数据添加到数据库中
                 Tag::create($tag_name);
-                return json_encode(['result'=>true]);
+                return ['result'=>true];
             }else{
                 // 没有通过验证
                 $str = "";
                 foreach($validator->errors()->all() as $k => $v){
                     $str .= $v.'，';
                 }
-                return json_encode(['result'=>false,'info'=>$str]);
+                return ['result'=>false,'info'=>$str];
             }
 
         }else {

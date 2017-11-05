@@ -25,6 +25,6 @@ class Article extends Authenticatable
     }
 
     public function column () {
-        return $this->hasMany('App\Http\Models\Column','col_id','ar_column_id');
+        return $this->hasOne('App\Http\Models\Column','col_id','ar_column_id');
     }
 }

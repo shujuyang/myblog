@@ -48,7 +48,7 @@
                 var shuju = $(this).serialize();
                 //执行ajax
                 $.ajax({
-                    url:'/admin/column/add',
+                    url:'/index.php/admin/column/add',
                     data:shuju,
                     dataType:'json',
                     type:'post',

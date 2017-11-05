@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Api\ApiController;
 use App\Http\Models\Article;
 use App\Http\Models\Column;
 use App\Http\Models\Student;
@@ -11,7 +12,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
 
-class ArticleController extends Controller
+class ArticleController extends ApiController
 {
     //showlist() 方法，后台显示文章列表
     public function showlist (Request $request) {

@@ -37,15 +37,14 @@ class ColumnController extends Controller
                 // 通过验证
                 // 将数据添加到数据库中
                 Column::create($col_name);
-                //dd($col_name);
-                return json_encode(['result'=>true]);
+                return ['result'=>true,'info'=>'添加成功'];
             }else{
                 // 没有通过验证
                 $str = "";
                 foreach($validator->errors()->all() as $k => $v){
                     $str .= $v.'，';
                 }
-                return json_encode(['result'=>false,'info'=>$str]);
+                return ['result'=>false,'info'=>$str];
             }
 
         }else {

@@ -16,6 +16,11 @@ Route::get('/home/index', 'Home\IndexController@index');
 Route::get('/home/index/index', 'Home\IndexController@index');
 Route::post('/captcha','Admin\ManagerController@captcha');
 
+Route::group(['prefix'=>'home','namespace'=>'Home'],function(){
+    Route::get('index/articleList','IndexController@articleList');
+    Route::get('article/articleInfo/{article}','ArticleController@articleInfo');
+});
+
 
 /*********设置url前缀 和 命名空间前缀 的路由群组**********/
 Route::group(['prefix'=>'admin','namespace'=>'Admin'],function(){
