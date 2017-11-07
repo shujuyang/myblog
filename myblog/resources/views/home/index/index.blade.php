@@ -6,8 +6,18 @@
     <meta name="keywords" content="杨舒杰的个人博客，个人博客，技术分享" />
     <meta name="description" content="杨舒杰的个人博客，个人博客，技术分享" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <style>
+        body {
+            height: 100%;
+            background-image: url('/home/images/loading.gif');
+            background-repeat: no-repeat;
+            background-position-x: 50%;
+            background-position-y: -50%;
+        }
+    </style>
 </head>
 <body>
+
     <div id="app"></div>
 </body>
 {{--D:\mysoftware\phpstudy\WWW\myblog\myblog\--}}
