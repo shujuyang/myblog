@@ -14,7 +14,7 @@
                         <p class="autor">
                             <span class="lm f_l"><a href="/">{{ article.column.col_name }}</a></span>
                             <span class="dtime f_l">{{ article.created_at }}</span>
-                            <a href=""><span class="viewnum f_r">浏览（459）</span></a>
+                            <a href=""><span class="viewnum f_r">浏览（{{ article.view_count }}）</span></a>
                             <a href=""><span class="pingl f_r">评论</span></a>
                         </p>
                     </ul>

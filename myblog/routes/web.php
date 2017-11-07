@@ -20,6 +20,8 @@ Route::group(['prefix'=>'home','namespace'=>'Home'],function(){
     Route::get('index/articleList','IndexController@articleList');
     Route::get('article/articleInfo/{article}','ArticleController@articleInfo');
     Route::get('article/articleList/{column}','ArticleController@articleList');
+    Route::get('article/getArticlesByView','ArticleController@articleListByView');
+    Route::get('article/getArticlesByNew','ArticleController@articleListByNew');
 });
 
 

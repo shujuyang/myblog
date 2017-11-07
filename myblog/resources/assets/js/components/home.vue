@@ -24,8 +24,8 @@
                     <h3>关注我</h3>
                     <div class="gzwm">
                         <ul>
-                            <li><a class="xlwb" href="#" target="_blank">新浪微博</a></li>
-                            <li><a class="wx" href="mailto:admin@admin.com">邮箱</a></li>
+                            <li><a class="xlwb" href="https://weibo.com/6364460030/profile?topnav=1&wvr=6&is_all=1" target="_blank">新浪微博</a></li>
+                            <li><a class="txwb" href="https://github.com/shujuyang" target="_blank">github</a></li>
                         </ul>
                     </div>
                 </div>
@@ -35,29 +35,21 @@
                     <div class="ms-top">
                         <ul class="hd" id="tab">
                             <li class="cur"><a href="/">点击排行</a></li>
-                            <li><a href="/">最新文章</a></li>
+                            <!--<li><a href="/">最新文章</a></li>-->
                         </ul>
                     </div>
                     <div class="ms-main" id="ms-main">
                         <div style="display: block;" class="bd bd-news" >
                             <ul>
-                                <li><a href="/" target="_blank">住在手机里的朋友</a></li>
-                                <li><a href="/" target="_blank">教你怎样用欠费手机拨打电话</a></li>
-                                <li><a href="/" target="_blank">原来以为，一个人的勇敢是，删掉他的手机号码...</a></li>
-                                <li><a href="/" target="_blank">手机的16个惊人小秘密，据说99.999%的人都不知</a></li>
-                                <li><a href="/" target="_blank">你面对的是生活而不是手机</a></li>
-                                <li><a href="/" target="_blank">豪雅手机正式发布! 在法国全手工打造的奢侈品</a></li>
+                                <li v-for="article in articlesView">
+                                    <a :href='"http://www.shujuyang.cn/#/articleInfo/"+article.ar_id' target="_blank">
+                                        {{ article.ar_title }}
+                                    </a></li>
+
                             </ul>
                         </div>
                         <div  class="bd bd-news">
-                            <ul>
-                                <li><a href="/" target="_blank">原来以为，一个人的勇敢是，删掉他的手机号码...</a></li>
-                                <li><a href="/" target="_blank">手机的16个惊人小秘密，据说99.999%的人都不知</a></li>
-                                <li><a href="/" target="_blank">住在手机里的朋友</a></li>
-                                <li><a href="/" target="_blank">教你怎样用欠费手机拨打电话</a></li>
-                                <li><a href="/" target="_blank">你面对的是生活而不是手机</a></li>
-                                <li><a href="/" target="_blank">豪雅手机正式发布! 在法国全手工打造的奢侈品</a></li>
-                            </ul>
+
                         </div>
                     </div>
                     <!--ms-main end -->
@@ -86,21 +78,13 @@
                 <div class="tuwen">
                     <h3>图文推荐</h3>
                     <ul>
-                        <li><a href="/"><img src="home/images/01.jpg"><b>住在手机里的朋友</b></a>
-                            <p><span class="tulanmu"><a href="/">手机配件</a></span><span class="tutime">2015-02-15</span></p>
-                        </li>
-                        <li><a href="/"><img src="home/images/02.jpg"><b>教你怎样用欠费手机拨打电话</b></a>
-                            <p><span class="tulanmu"><a href="/">手机配件</a></span><span class="tutime">2015-02-15</span></p>
-                        </li>
-                        <li><a href="/" title="手机的16个惊人小秘密，据说99.999%的人都不知"><img src="home/images/03.jpg"><b>手机的16个惊人小秘密，据说...</b></a>
-                            <p><span class="tulanmu"><a href="/">手机配件</a></span><span class="tutime">2015-02-15</span></p>
-                        </li>
-                        <li><a href="/"><img src="home/images/06.jpg"><b>住在手机里的朋友</b></a>
-                            <p><span class="tulanmu"><a href="/">手机配件</a></span><span class="tutime">2015-02-15</span></p>
-                        </li>
-                        <li><a href="/"><img src="home/images/04.jpg"><b>教你怎样用欠费手机拨打电话</b></a>
-                            <p><span class="tulanmu"><a href="/">手机配件</a></span><span class="tutime">2015-02-15</span></p>
-                        </li>
+                        <ul>
+                            <li v-for="article in articlesNew">
+                                <a :href='"http://www.shujuyang.cn/#/articleInfo/"+article.ar_id' target="_blank">
+                                    {{ article.ar_title }}
+                                </a></li>
+
+                        </ul>
                     </ul>
                 </div>
                 <div class="ad"> <img src="home/images/03.jpg"> </div>
@@ -115,7 +99,7 @@
         </article>
         <footer>
             <p class="ft-copyright">杨舒杰的博客 	 &nbsp;&nbsp;&nbsp;&nbsp; 京ICP备17042742号-1</p>
-            <div id="tbox"> <a id="togbook" href="/"></a> <a id="gotop" href="javascript:void(0)"></a> </div>
+            <div id="tbox"> <a id="togbook" href="/#/articleList/message"></a> <a id="gotop" href="#"></a> </div>
         </footer>
 
     </div>
@@ -123,6 +107,8 @@
 </template>
 
 <script>
+    import axios from "axios"
+
     var _hmt = _hmt || [];
     (function() {
         var hm = document.createElement("script");
@@ -133,8 +119,22 @@
     export default{
         data: function() {
             return {
-
+                articlesView:[],
+                articlesNew: []
             }
+        },
+        created: function() {
+          axios.get('/index.php/home/article/getArticlesByView').then(res=>{
+              if(res['data']['result']){
+                  this.articlesView = res['data']['articlesView']
+              }
+          });
+
+          axios.get('/index.php/home/article/getArticlesByNew').then(res=>{
+              if(res['data']['result']){
+                  this.articlesNew = res['data']['articlesView']
+              }
+          });
         },
         mounted: function () {
 

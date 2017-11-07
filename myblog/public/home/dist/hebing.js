@@ -13340,9 +13340,13 @@ var render = function() {
                     _vm._v(_vm._s(article.created_at))
                   ]),
                   _vm._v(" "),
-                  _vm._m(2, true),
+                  _c("a", { attrs: { href: "" } }, [
+                    _c("span", { staticClass: "viewnum f_r" }, [
+                      _vm._v("浏览（ " + _vm._s(article.view_count) + " ）")
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _vm._m(3, true)
+                  _vm._m(2, true)
                 ])
               ])
             ])
@@ -13404,14 +13408,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("h2", [_c("b", [_vm._v("文章")]), _vm._v("推荐")])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { attrs: { href: "" } }, [
-      _c("span", { staticClass: "viewnum f_r" }, [_vm._v("浏览（459）")])
-    ])
   },
   function() {
     var _vm = this
@@ -13532,22 +13528,8 @@ exports.push([module.i, "\n", ""]);
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
 //
 //
 //
@@ -13657,6 +13639,8 @@ exports.push([module.i, "\n", ""]);
 //
 //
 
+
+
 var _hmt = _hmt || [];
 (function () {
     var hm = document.createElement("script");
@@ -13666,7 +13650,23 @@ var _hmt = _hmt || [];
 })();
 /* harmony default export */ __webpack_exports__["a"] = ({
     data: function () {
-        return {};
+        return {
+            articlesView: [],
+            articlesNew: []
+        };
+    },
+    created: function () {
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/index.php/home/article/getArticlesByView').then(res => {
+            if (res['data']['result']) {
+                this.articlesView = res['data']['articlesView'];
+            }
+        });
+
+        __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/index.php/home/article/getArticlesByNew').then(res => {
+            if (res['data']['result']) {
+                this.articlesNew = res['data']['articlesView'];
+            }
+        });
     },
     mounted: function () {}
 
@@ -13684,9 +13684,106 @@ var render = function() {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("article", [_c("router-view"), _vm._v(" "), _vm._m(1)], 1),
+    _c(
+      "article",
+      [
+        _c("router-view"),
+        _vm._v(" "),
+        _c("div", { staticClass: "r_box f_r" }, [
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._m(2),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "moreSelect", attrs: { id: "lp_right_select" } },
+            [
+              _vm._m(3),
+              _vm._v(" "),
+              _c("div", { staticClass: "ms-main", attrs: { id: "ms-main" } }, [
+                _c(
+                  "div",
+                  {
+                    staticClass: "bd bd-news",
+                    staticStyle: { display: "block" }
+                  },
+                  [
+                    _c(
+                      "ul",
+                      _vm._l(_vm.articlesView, function(article) {
+                        return _c("li", [
+                          _c(
+                            "a",
+                            {
+                              attrs: {
+                                href:
+                                  "http://www.shujuyang.cn/#/articleInfo/" +
+                                  article.ar_id,
+                                target: "_blank"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    " +
+                                  _vm._s(article.ar_title) +
+                                  "\n                                "
+                              )
+                            ]
+                          )
+                        ])
+                      })
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "bd bd-news" })
+              ])
+            ]
+          ),
+          _vm._v(" "),
+          _vm._m(4),
+          _vm._v(" "),
+          _c("div", { staticClass: "tuwen" }, [
+            _c("h3", [_vm._v("图文推荐")]),
+            _vm._v(" "),
+            _c("ul", [
+              _c(
+                "ul",
+                _vm._l(_vm.articlesNew, function(article) {
+                  return _c("li", [
+                    _c(
+                      "a",
+                      {
+                        attrs: {
+                          href:
+                            "http://www.shujuyang.cn/#/articleInfo/" +
+                            article.ar_id,
+                          target: "_blank"
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                                " +
+                            _vm._s(article.ar_title) +
+                            "\n                            "
+                        )
+                      ]
+                    )
+                  ])
+                })
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _vm._m(5),
+          _vm._v(" "),
+          _vm._m(6)
+        ])
+      ],
+      1
+    ),
     _vm._v(" "),
-    _vm._m(2)
+    _vm._m(7)
   ])
 }
 var staticRenderFns = [
@@ -13736,270 +13833,124 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "r_box f_r" }, [
-      _c("div", { staticClass: "tit01" }, [
-        _c("h3", [_vm._v("关注我")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "gzwm" }, [
-          _c("ul", [
-            _c("li", [
-              _c(
-                "a",
-                { staticClass: "xlwb", attrs: { href: "#", target: "_blank" } },
-                [_vm._v("新浪微博")]
-              )
-            ]),
-            _vm._v(" "),
-            _c("li", [
-              _c(
-                "a",
-                {
-                  staticClass: "wx",
-                  attrs: { href: "mailto:admin@admin.com" }
-                },
-                [_vm._v("邮箱")]
-              )
-            ])
-          ])
-        ])
-      ]),
+    return _c("div", { staticClass: "tit01" }, [
+      _c("h3", [_vm._v("关注我")]),
       _vm._v(" "),
-      _c("div", { staticClass: "ad300x100" }, [
-        _c("img", { attrs: { src: "home/images/ad300x100.jpg" } })
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "moreSelect", attrs: { id: "lp_right_select" } },
-        [
-          _c("div", { staticClass: "ms-top" }, [
-            _c("ul", { staticClass: "hd", attrs: { id: "tab" } }, [
-              _c("li", { staticClass: "cur" }, [
-                _c("a", { attrs: { href: "/" } }, [_vm._v("点击排行")])
-              ]),
-              _vm._v(" "),
-              _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("最新文章")])])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "ms-main", attrs: { id: "ms-main" } }, [
+      _c("div", { staticClass: "gzwm" }, [
+        _c("ul", [
+          _c("li", [
             _c(
-              "div",
-              { staticClass: "bd bd-news", staticStyle: { display: "block" } },
-              [
-                _c("ul", [
-                  _c("li", [
-                    _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                      _vm._v("住在手机里的朋友")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                      _vm._v("教你怎样用欠费手机拨打电话")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                      _vm._v("原来以为，一个人的勇敢是，删掉他的手机号码...")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                      _vm._v("手机的16个惊人小秘密，据说99.999%的人都不知")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                      _vm._v("你面对的是生活而不是手机")
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("li", [
-                    _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                      _vm._v("豪雅手机正式发布! 在法国全手工打造的奢侈品")
-                    ])
-                  ])
-                ])
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "bd bd-news" }, [
-              _c("ul", [
-                _c("li", [
-                  _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                    _vm._v("原来以为，一个人的勇敢是，删掉他的手机号码...")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                    _vm._v("手机的16个惊人小秘密，据说99.999%的人都不知")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                    _vm._v("住在手机里的朋友")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                    _vm._v("教你怎样用欠费手机拨打电话")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                    _vm._v("你面对的是生活而不是手机")
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _c("a", { attrs: { href: "/", target: "_blank" } }, [
-                    _vm._v("豪雅手机正式发布! 在法国全手工打造的奢侈品")
-                  ])
-                ])
-              ])
-            ])
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c("div", { staticClass: "cloud" }, [
-        _c("h3", [_vm._v("标签云")]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("个人博客")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("web开发")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("前端设计")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Html")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("CSS3")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Html5+css3")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("百度")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Javasript")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("web开发")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("前端设计")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Html")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("CSS3")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Html5+css3")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("百度")])])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "tuwen" }, [
-        _c("h3", [_vm._v("图文推荐")]),
-        _vm._v(" "),
-        _c("ul", [
-          _c("li", [
-            _c("a", { attrs: { href: "/" } }, [
-              _c("img", { attrs: { src: "home/images/01.jpg" } }),
-              _c("b", [_vm._v("住在手机里的朋友")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("span", { staticClass: "tulanmu" }, [
-                _c("a", { attrs: { href: "/" } }, [_vm._v("手机配件")])
-              ]),
-              _c("span", { staticClass: "tutime" }, [_vm._v("2015-02-15")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "/" } }, [
-              _c("img", { attrs: { src: "home/images/02.jpg" } }),
-              _c("b", [_vm._v("教你怎样用欠费手机拨打电话")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("span", { staticClass: "tulanmu" }, [
-                _c("a", { attrs: { href: "/" } }, [_vm._v("手机配件")])
-              ]),
-              _c("span", { staticClass: "tutime" }, [_vm._v("2015-02-15")])
-            ])
+              "a",
+              {
+                staticClass: "xlwb",
+                attrs: {
+                  href:
+                    "https://weibo.com/6364460030/profile?topnav=1&wvr=6&is_all=1",
+                  target: "_blank"
+                }
+              },
+              [_vm._v("新浪微博")]
+            )
           ]),
           _vm._v(" "),
           _c("li", [
             _c(
               "a",
-              { attrs: { href: "/", title: "手机的16个惊人小秘密，据说99.999%的人都不知" } },
-              [
-                _c("img", { attrs: { src: "home/images/03.jpg" } }),
-                _c("b", [_vm._v("手机的16个惊人小秘密，据说...")])
-              ]
-            ),
-            _vm._v(" "),
-            _c("p", [
-              _c("span", { staticClass: "tulanmu" }, [
-                _c("a", { attrs: { href: "/" } }, [_vm._v("手机配件")])
-              ]),
-              _c("span", { staticClass: "tutime" }, [_vm._v("2015-02-15")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "/" } }, [
-              _c("img", { attrs: { src: "home/images/06.jpg" } }),
-              _c("b", [_vm._v("住在手机里的朋友")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("span", { staticClass: "tulanmu" }, [
-                _c("a", { attrs: { href: "/" } }, [_vm._v("手机配件")])
-              ]),
-              _c("span", { staticClass: "tutime" }, [_vm._v("2015-02-15")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "/" } }, [
-              _c("img", { attrs: { src: "home/images/04.jpg" } }),
-              _c("b", [_vm._v("教你怎样用欠费手机拨打电话")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("span", { staticClass: "tulanmu" }, [
-                _c("a", { attrs: { href: "/" } }, [_vm._v("手机配件")])
-              ]),
-              _c("span", { staticClass: "tutime" }, [_vm._v("2015-02-15")])
-            ])
+              {
+                staticClass: "txwb",
+                attrs: {
+                  href: "https://github.com/shujuyang",
+                  target: "_blank"
+                }
+              },
+              [_vm._v("github")]
+            )
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "ad" }, [
-        _c("img", { attrs: { src: "home/images/03.jpg" } })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "links" }, [
-        _c("h3", [
-          _c("span", [
-            _vm._v("["),
-            _c("a", { attrs: { href: "/" } }, [_vm._v("申请友情链接")]),
-            _vm._v("]")
-          ]),
-          _vm._v("友情链接")
-        ]),
-        _vm._v(" "),
-        _c("ul")
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ad300x100" }, [
+      _c("img", { attrs: { src: "home/images/ad300x100.jpg" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ms-top" }, [
+      _c("ul", { staticClass: "hd", attrs: { id: "tab" } }, [
+        _c("li", { staticClass: "cur" }, [
+          _c("a", { attrs: { href: "/" } }, [_vm._v("点击排行")])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "cloud" }, [
+      _c("h3", [_vm._v("标签云")]),
+      _vm._v(" "),
+      _c("ul", [
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("个人博客")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("web开发")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("前端设计")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Html")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("CSS3")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Html5+css3")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("百度")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Javasript")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("web开发")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("前端设计")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Html")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("CSS3")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("Html5+css3")])]),
+        _vm._v(" "),
+        _c("li", [_c("a", { attrs: { href: "/" } }, [_vm._v("百度")])])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ad" }, [
+      _c("img", { attrs: { src: "home/images/03.jpg" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "links" }, [
+      _c("h3", [
+        _c("span", [
+          _vm._v("["),
+          _c("a", { attrs: { href: "/" } }, [_vm._v("申请友情链接")]),
+          _vm._v("]")
+        ]),
+        _vm._v("友情链接")
+      ]),
+      _vm._v(" "),
+      _c("ul")
     ])
   },
   function() {
@@ -14012,9 +13963,9 @@ var staticRenderFns = [
       ]),
       _vm._v(" "),
       _c("div", { attrs: { id: "tbox" } }, [
-        _c("a", { attrs: { id: "togbook", href: "/" } }),
+        _c("a", { attrs: { id: "togbook", href: "/#/articleList/message" } }),
         _vm._v(" "),
-        _c("a", { attrs: { id: "gotop", href: "javascript:void(0)" } })
+        _c("a", { attrs: { id: "gotop", href: "#" } })
       ])
     ])
   }
@@ -14414,9 +14365,13 @@ var render = function() {
                     _vm._v(_vm._s(article.created_at))
                   ]),
                   _vm._v(" "),
-                  _vm._m(1, true),
+                  _c("a", { attrs: { href: "" } }, [
+                    _c("span", { staticClass: "viewnum f_r" }, [
+                      _vm._v("浏览（" + _vm._s(article.view_count) + "）")
+                    ])
+                  ]),
                   _vm._v(" "),
-                  _vm._m(2, true)
+                  _vm._m(1, true)
                 ])
               ])
             ])
@@ -14433,14 +14388,6 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("h2", [_c("b", [_vm._v("文章")]), _vm._v("推荐 "), _c("span")])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("a", { attrs: { href: "" } }, [
-      _c("span", { staticClass: "viewnum f_r" }, [_vm._v("浏览（459）")])
-    ])
   },
   function() {
     var _vm = this
