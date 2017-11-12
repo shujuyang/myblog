@@ -19,7 +19,9 @@
 <body>
 
     <div id="app"></div>
+
 </body>
 {{--D:\mysoftware\phpstudy\WWW\myblog\myblog\--}}
 <script src='/home/dist/hebing.js'></script>
+{{--<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>--}}
 </html>
